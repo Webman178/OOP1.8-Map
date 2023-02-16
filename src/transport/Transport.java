@@ -220,7 +220,7 @@ public abstract class Transport<T extends Mechanic, S extends Driver> {
     public boolean equals(Object obj) {
         if (this == obj)
             return true;
-        if (obj == null && obj.getClass() != this.getClass()) {
+        if (obj == null || obj.getClass() != this.getClass()) {
             return false;
         }
         Transport ts = (Transport) obj;
